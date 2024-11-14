@@ -1,0 +1,135 @@
+@charset "UTF-8";
+
+* {
+
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+.game-board {
+
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    border-bottom: 20px solid #170;
+    background: linear-gradient(#87ceeb, #e0f6ff);
+
+}
+
+.clouds {
+
+    position: absolute;
+    width: 550px;
+
+    animation: clouds-animation 20s infinite linear;
+
+}
+
+.pipe {
+
+    position: absolute;
+    bottom: 0;
+    width: 80px;
+    height: 80px;
+
+    animation: pipe-animation 1.5s infinite linear;
+    /* Alguns pontos importantes..
+    
+        - Os segundos apresentados correspondem ao TEMPO da animação;
+        
+        - O "infinite" corresponde à QUANTIDADE de vezes que a animação será iniciada e, usando "infinite", a animação será um LOOP infinito;
+        
+        - O "linear" corresponde ao ANDAMENTO da animação e, usando "linear", a animação irá manter o andamento sem variação de velocidade, nem nada do tipo!!
+
+    */
+
+}
+
+.mario {
+
+    position: absolute;
+    bottom: 0;
+    width: 150px;
+
+}
+
+.jump {
+
+    animation: jump 700ms ease-out;
+    /* Nesse caso, temos mais alguns pontos..
+
+        - O "ease-out" corresponde a SUAVIDADE da animação e.. basicamente, esse detalhe será visível sempre quando o Mário estiver chegando ao chão!!
+
+    */
+
+}
+
+@keyframes clouds-animation {
+
+    from {
+
+        right: -550px;
+
+    }
+
+    to {
+
+        right: 100%;
+
+    }
+
+}
+
+@keyframes pipe-animation {
+
+    from {
+
+        right: -80px;
+
+    }
+
+    to {
+
+        right: 100%;
+
+    }
+
+}
+
+@keyframes jump {
+
+    0% {
+
+        bottom: 0;
+
+    }
+
+    40% {
+
+        bottom: 180px;
+
+    }
+
+    50% {
+
+        bottom: 180px;
+
+    }
+
+    60% {
+
+        bottom: 180px;
+
+    }
+
+    100% {
+
+        bottom: 0;
+
+    }
+
+}
