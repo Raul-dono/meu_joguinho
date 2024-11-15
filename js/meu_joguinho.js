@@ -55,7 +55,7 @@ const loop = setInterval (() => {
 
 
 
-        mario.src = `/imagens/game-over.png`
+        mario.src = `imagens/game-over.png`
 
         mario.style.width = `80px`
 
